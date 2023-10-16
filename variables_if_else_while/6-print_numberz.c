@@ -10,10 +10,10 @@
  */
 int main(void)
 {
-	short i;
+	unsigned short int i;
 
 	for (i = 0; i < 10; i++)
-		putchar(i);
+		putchar('0' + i);
 	putchar('\n');
 	return (0);
 }
