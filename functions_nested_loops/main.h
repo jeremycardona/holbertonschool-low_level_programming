@@ -5,10 +5,11 @@
  * Return: sucess
  * Description: putchar
  */
-void  _putchar(void);
+int  _putchar(void);
 
-void _putchar(void)
+int  _putchar(void)
 {
 	printf("%s\n", "_putchar");
+	return (0);
 }
 #endif
