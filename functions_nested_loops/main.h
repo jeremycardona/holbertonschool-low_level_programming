@@ -1,8 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void print_alphabet(void);
-
 /**
  * _putchar - nothing yet
  * Return: sucess
@@ -13,5 +11,7 @@ int  _putchar(void)
 {
 	return (0);
 }
+
+void print_alphabet(void);
 
 #endif
