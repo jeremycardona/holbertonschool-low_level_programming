@@ -14,11 +14,5 @@ int  _putchar(void)
  * print_alphabet - print alphabet
  * Description: print the alphabet in lowercase
  */
-void print_alphabet(void)
-{
-        char letter;
-
-        for (letter = 'a'; letter <= 'z'; letter++)
-                printf("%c", letter);
-        printf("\n");
-}#endif
+void print_alphabet(void);
+#endif
