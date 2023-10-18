@@ -8,11 +8,6 @@
  */
 int main(void)
 {
-	print_alphabet();
+	_putchar();
 	return (0);
 }
-
-/**
- * print_alphabet - print alphabet
- * Description: print the alphabet in lowercase
- */

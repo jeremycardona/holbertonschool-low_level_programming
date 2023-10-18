@@ -5,8 +5,10 @@
  * Return: sucess
  * Description: putchar
  */
+void print_alphabet(void);
 int  _putchar(void)
 {
+	print_alphabet();
 	return (0);
 }
 
@@ -14,5 +16,4 @@ int  _putchar(void)
  * print_alphabet - print alphabet
  * Description: print the alphabet in lowercase
  */
-void print_alphabet(void);
 #endif
