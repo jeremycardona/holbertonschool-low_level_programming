@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-void print_alphabet(void);
 /**
  * main - entry point
  * Return: sucess
@@ -17,11 +16,3 @@ int main(void)
  * print_alphabet - print alphabet
  * Description: print the alphabet in lowercase
  */
-void print_alphabet(void)
-{
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-		printf("%c", letter);
-	printf("\n");
-}

@@ -9,4 +9,16 @@ int  _putchar(void)
 {
 	return (0);
 }
-#endif
+
+/**
+ * print_alphabet - print alphabet
+ * Description: print the alphabet in lowercase
+ */
+void print_alphabet(void)
+{
+        char letter;
+
+        for (letter = 'a'; letter <= 'z'; letter++)
+                printf("%c", letter);
+        printf("\n");
+}#endif
