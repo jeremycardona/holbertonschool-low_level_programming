@@ -5,7 +5,7 @@
  * Description: print the alphabet ten times in lowercase.
  *
  */
-void print_alphabet_X10(void)
+void print_alphabet_x10(void)
 {
 	short i;
 
