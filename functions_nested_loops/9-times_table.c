@@ -7,16 +7,21 @@
 void times_table(void)
 {
 	int row = 0, column = 0, multiple;
-	char c;
 
 	for (; row <= 9; row++)
 	{
 		while (column <= 9)
 		{
 			multiple = row * column;
-			c = multiple;
-
-			_putchar(c);
+			if (multiple <= 9)
+			{
+				_putchar('0' + multiple);
+			}
+			else
+			{
+				_putchar('0' + multiple / 10);
+				_putchar('0' + multiple % 10);
+			}
 			if (column < 9)
 			{
 				_putchar(',');
