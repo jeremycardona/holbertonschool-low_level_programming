@@ -2,7 +2,7 @@
 /**
  * times_table - print the multiplication table up to 9
  * Description: Print the multiplication table up to 9,
- * separated by comma and two spaces  
+ * separated by comma and two spaces
  */
 void times_table(void)
 {
@@ -26,7 +26,8 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
+				if (multiple <= 9)
+					_putchar(' ');
 			}
 			column++;
 		}
