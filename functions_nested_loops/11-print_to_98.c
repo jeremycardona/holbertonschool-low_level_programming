@@ -38,7 +38,10 @@ void _put_n(int n)
 	{
 		_putchar('0' + n / 10);
 	}
-	_putchar('0' + n % 10);
+	else
+	{
+		_putchar('0' + n % 10);
+	}
 }
 /**
  * _put_comma_space - print coma and space
