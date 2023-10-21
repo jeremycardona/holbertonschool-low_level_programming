@@ -5,5 +5,8 @@ NAME = school
 
 all: ${NAME}
 
-school: ${SRC}
-	${CC} ${SRC} -o school 
+program1: ${OBJ}
+	${CC} -c $^ -o $@
+
+${NAME}: ${SRC}
+	${CC} ${SRC} -o ${NAME}
