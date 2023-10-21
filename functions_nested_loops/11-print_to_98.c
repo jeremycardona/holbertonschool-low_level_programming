@@ -38,7 +38,7 @@ void print_greater_98(int n)
 {
 	while (n >= 98)
 	{
-		_putchar('0' + n);
+		_putchar((char)n);
 		if (n != 98)
 			_put_comma_space();
 		n--;
@@ -56,7 +56,7 @@ void print_less_98(int n)
 {
 	while (n <= 98)
 	{
-		_putchar('0' + n);
+		_putchar((char)n);
 		if (n != 98)
 			_put_comma_space();
 		n++;
@@ -70,6 +70,6 @@ void print_less_98(int n)
  */
 void print_equal_98(void)
 {
-	_putchar('0' + 98);
+	_putchar((char)98);
 	_putchar('\n');
 }
