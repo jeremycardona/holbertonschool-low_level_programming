@@ -52,7 +52,7 @@ void _put_n(int n)
 		_putchar('0' + n / 10);
 		_putchar('0' + n % 10);
 	}
-	else if ( n < 10)
+	else if (n < 10)
 	{
 		_putchar('0' + n % 10);
 	}
@@ -91,16 +91,16 @@ void print_greater_98(int n)
 
 void print_less_98(int n)
 {
-	int n_unsigned;
+	int n_uns;
 
 	while (n <= 98)
 	{
-		n_unsigned = n * -1;
+		n_uns = n * -1;
 
-		if ( n < 0)
+		if (n < 0)
 		{
 			_putchar('-');
-			_put_n(n_unsigned);	
+			_put_n(n_uns);
 		}
 		else
 		{
