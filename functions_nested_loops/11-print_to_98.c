@@ -91,10 +91,12 @@ void print_greater_98(int n)
 
 void print_less_98(int n)
 {
-	int n_unsigned = n * -1;
+	int n_unsigned;
 
 	while (n <= 98)
 	{
+		n_unsigned = n * -1;
+
 		if ( n < 0)
 		{
 			_putchar('-');
