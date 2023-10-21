@@ -1,5 +1,6 @@
 #include "main.h"
 
+void _put_n(int);
 void _put_comma_space(void);
 void print_greater_98(int);
 void print_less_98(int);
@@ -21,6 +22,19 @@ void print_to_98(int n)
 }
 
 /**
+ * _put_n - print n
+ * Description: Verify conditions to print n
+ * @n: number to be printed
+ */
+void _put_n(int n)
+{
+	if (n > 99)
+		_putchar('0' + n / 100);
+	if (n > 9)
+		_putchar('0' + n / 10);
+	_putchar('0' + n % 10);
+}
+/**
  * _put_comma_space - print coma and space
  * Description: print comma and space.
  */
@@ -38,7 +52,7 @@ void print_greater_98(int n)
 {
 	while (n >= 98)
 	{
-		_putchar((char)n);
+		_put_n(n);
 		if (n != 98)
 			_put_comma_space();
 		n--;
@@ -56,7 +70,12 @@ void print_less_98(int n)
 {
 	while (n <= 98)
 	{
-		_putchar((char)n);
+		if ( n < 0)
+		{
+			_putchar('-');
+			n *= -1;
+		}
+		_put_n(n);
 		if (n != 98)
 			_put_comma_space();
 		n++;
@@ -70,6 +89,7 @@ void print_less_98(int n)
  */
 void print_equal_98(void)
 {
-	_putchar((char)98);
+	_putchar('9');
+	_putchar('8');
 	_putchar('\n');
 }
