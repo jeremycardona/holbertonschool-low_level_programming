@@ -47,9 +47,10 @@ void _put_n(int n)
 			_putchar('0' + n % 10);
 		}
 	}
-	if (n > 9)
+	if (n > 9 && n < 100)
 	{
 		_putchar('0' + n / 10);
+		_putchar('0' + n % 10);
 	}
 	else
 	{
