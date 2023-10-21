@@ -91,17 +91,21 @@ void print_greater_98(int n)
 
 void print_less_98(int n)
 {
+	int n_unsigned = n * -1;
+
 	while (n <= 98)
 	{
 		if ( n < 0)
 		{
 			_putchar('-');
-			n *= -1;
+			_putchar(n_unsigned);	
 		}
-		_put_n(n);
+		else
+		{
+			_put_n(n);
+		}
 		if (n != 98)
 			_put_comma_space();
-		n *= -1;
 		n++;
 	}
 	_putchar('\n');
