@@ -98,7 +98,7 @@ void print_less_98(int n)
 		if ( n < 0)
 		{
 			_putchar('-');
-			_putchar(n_unsigned);	
+			_put_n(n_unsigned);	
 		}
 		else
 		{
