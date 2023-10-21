@@ -5,8 +5,10 @@ NAME = school
 
 all: ${NAME}
 
-program1: ${OBJ}
+${NAME}: ${OBJ}
 	${CC} -c $^ -o $@
 
 ${NAME}: ${SRC}
 	${CC} ${SRC} -o ${NAME}
+
+
