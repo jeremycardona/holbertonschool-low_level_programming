@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	int max = 102, term;
+	int max = 10, term;
 	unsigned long fib, fib_term1 = 1, fib_term2 = 2;
 
 	printf("%lu, %lu, ", fib_term1, fib_term2);
-	for (term = 2; term <= max; term++)
+	for (term = 2; term < max; term++)
 	{
 		fib = fib_term1 + fib_term2;
 		printf("%lu", fib);
-		if (term < max)
+		if (term + 1 < max)
 			printf(", ");
 		fib_term1 = fib_term2;
 		fib_term2 = fib;
