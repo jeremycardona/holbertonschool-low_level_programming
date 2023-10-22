@@ -1,6 +1,7 @@
 /**
- *
- *
+ * print_square - print a square
+ * Description: print a square of the size
+ * @size: square size
  */
 void print_square(int size)
 {
