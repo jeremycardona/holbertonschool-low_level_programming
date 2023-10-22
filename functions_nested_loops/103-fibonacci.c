@@ -9,12 +9,12 @@
  */
 int main(void)
 {
-	int term, max = 4000000;
+	int max = 4000000;
 	long int fib_term1 = 1, fib_term2 = 2, even_fib = 2, fib;
 
-	for (term = 1; term < max; term++)
+	for (fib = 3; fib < max; fib = fib_term1 + fib_term2)
 	{
-		fib = fib_term1 + fib_term2;
+
 		if (fib % 2 == 0)
 			even_fib += fib;
 		fib_term1 = fib_term2;
