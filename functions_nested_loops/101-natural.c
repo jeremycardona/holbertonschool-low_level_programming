@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - sum multiples of 3 and 5
- * return: sucess
- * description: sum multiples of 3 and 5 below 1024
+ * Return: sucess
+ * Description: sum multiples of 3 and 5 below 1024
  */
 int main(void)
 {
