@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	int max = 98, term, fib, fib_term1 = 1, fib_term2 = 2;
+	int max = 98, term;
+	long int fib, fib_term1 = 1, fib_term2 = 2;
 
 	printf("%d, %d, ", fib_term1, fib_term2);
 	for (term = 1; term < max; term++)
