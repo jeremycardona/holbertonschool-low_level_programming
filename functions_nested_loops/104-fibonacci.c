@@ -10,7 +10,7 @@ int main(void)
 	long int fib, fib_term1 = 1, fib_term2 = 2;
 
 	printf("%ld, %ld, ", fib_term1, fib_term2);
-	for (term = 0; term <= max; term++)
+	for (term = 0; term < max; term++)
 	{
 		fib = fib_term1 + fib_term2;
 		printf("%ld", fib);
