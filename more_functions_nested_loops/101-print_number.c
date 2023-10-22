@@ -3,7 +3,7 @@
 /* prototypes here */
 void put_num(int);
 /**
- * more_numbers - print nummber
+ * print_number - print nummber
  * Description: print a num
  * @n: number to print
  */
