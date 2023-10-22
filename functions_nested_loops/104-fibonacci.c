@@ -10,11 +10,11 @@ int main(void)
 	unsigned long fib, fib_term1 = 1, fib_term2 = 2;
 
 	printf("%lu, %lu, ", fib_term1, fib_term2);
-	for (term = 2; term <= max; term++)
+	for (term = 1; term <= max; term++)
 	{
 		fib = fib_term1 + fib_term2;
 		printf("%lu", fib);
-		if (term + 1 <= max)
+		if (term < max)
 			printf(", ");
 		fib_term1 = fib_term2;
 		fib_term2 = fib;
