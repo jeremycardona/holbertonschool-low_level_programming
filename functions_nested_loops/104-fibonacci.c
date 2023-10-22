@@ -14,7 +14,7 @@ int main(void)
 	{
 		fib = fib_term1 + fib_term2;
 		printf("%lu", fib);
-		if (term + 1 < max)
+		if (term + 1 <= max)
 			printf(", ");
 		fib_term1 = fib_term2;
 		fib_term2 = fib;
