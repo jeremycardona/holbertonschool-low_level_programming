@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int max = 96, term;
+	int max = 97, term;
 	unsigned long fib, fib_term1 = 1, fib_term2 = 2;
 
 	printf("%lu, %lu, ", fib_term1, fib_term2);
