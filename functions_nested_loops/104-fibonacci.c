@@ -7,13 +7,13 @@
 int main(void)
 {
 	int max = 98, term;
-	long long int fib, fib_term1 = 1, fib_term2 = 2;
+	long unsigned fib, fib_term1 = 1, fib_term2 = 2;
 
-	printf("%lld, %lld, ", fib_term1, fib_term2);
+	printf("%lu, %lu, ", fib_term1, fib_term2);
 	for (term = 0; term < max; term++)
 	{
 		fib = fib_term1 + fib_term2;
-		printf("%lld", fib);
+		printf("%lu", fib);
 		if (term + 1 < max)
 			printf(", ");
 		fib_term1 = fib_term2;
