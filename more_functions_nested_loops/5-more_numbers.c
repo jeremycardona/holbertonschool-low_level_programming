@@ -14,7 +14,10 @@ void more_numbers(void)
 	while (times--)
 	{
 		while (num < 15)
+		{
 			put_num(num);
+			num++;
+		}
 		_putchar('\n');
 		num = 0;
 	}
