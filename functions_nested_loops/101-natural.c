@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- *
- *
+ * main - sum multiples of 3 and 5
+ * return: sucess
+ * description: sum multiples of 3 and 5 below 1024
  */
 int main(void)
 {
@@ -11,7 +12,7 @@ int main(void)
 	{
 		if (natural % 3  == 0 || natural % 5 == 0)
 			sum_multiples += natural;
-	}	
+	}
 	printf("%d\n", sum_multiples);
 	return (0);
 }
