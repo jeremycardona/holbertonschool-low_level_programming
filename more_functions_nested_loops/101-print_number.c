@@ -5,7 +5,7 @@ void put_num(int);
 /**
  * more_numbers - print nummber
  * Description: print a num
- * @n: number to print 
+ * @n: number to print
  */
 
 void print_number(int n)
@@ -13,9 +13,8 @@ void print_number(int n)
 	put_num(n);
 }
 /**
- * put_num - print numbers up to 99
- * description: print numbers up to 99 using
- * _putchar.
+ * put_num - print numbers
+ * Description: print numbers
  * @n: number to be printed.
  */
 void put_num(int n)
@@ -23,7 +22,7 @@ void put_num(int n)
 	if (n < 0)
 		_putchar('-');
 	if (n > 999)
-		_putchar('0' + n / 1000);
+		_putchar('0' + (n / 1000) % 10);
 	if (n > 99)
 		_putchar('0' + (n / 100) % 10);
 	if (n > 9)
