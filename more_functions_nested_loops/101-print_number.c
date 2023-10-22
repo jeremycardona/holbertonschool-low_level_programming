@@ -20,6 +20,8 @@ void print_number(int n)
  */
 void put_num(int n)
 {
+	if (n < 0)
+		_putchar('-');
 	if (n > 999)
 		_putchar('0' + n / 1000);
 	if (n > 99)
