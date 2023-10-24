@@ -11,9 +11,13 @@ void print_rev(char *s)
 	{
 		int s_len = _strlen(s);
 		char *p;
-
+		char nonsense = *s;
+		
+		*s = '\0';
 		p = s - 1;
 		s += s_len;
+
+		_putchar(nonsense);
 		while (s != p)
 		{
 			_putchar(*s);
