@@ -10,15 +10,12 @@ void print_rev(char *s)
 	if (s != 0)
 	{
 		int s_len = _strlen(s);
-/*		char *p; */
-		char nonsense = *(s + 0);
+		char *p;
 
-		*(s + 0) = '\0';
-		/* p = s - 1; */
+		p = s - 1;
 		s += s_len;
 
-		_putchar(nonsense);
-		while (*s != '\0')
+		while (s != p || *s != '\0')
 		{
 			_putchar(*s);
 			s--;
