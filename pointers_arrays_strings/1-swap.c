@@ -1,6 +1,6 @@
 /**
  * swap_int - Swap the values of two integers
- * Description: Function that swaps the values of two 
+ * Description: Function that swaps the values of two
  * integers.
  * @a: value one
  * @b: value two
