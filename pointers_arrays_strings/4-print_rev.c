@@ -11,9 +11,9 @@ void print_rev(char *s)
 	{
 		int s_len = _strlen(s);
 /*		char *p; */
-		char nonsense = *(s);
+		char nonsense = *(s + 0);
 
-		*s = '\0';
+		*(s + 0) = '\0';
 		/* p = s - 1; */
 		s += s_len;
 
