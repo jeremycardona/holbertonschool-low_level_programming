@@ -1,0 +1,23 @@
+/**
+ * _strcpy - copy the string src to dest
+ * Description: Copy the string pointed to by src,
+ * included the null byte, to the buffer pointed to by dest.
+ * Return: String copy
+ * @dest: address to be pasted
+ * @src: address to be copied
+ */
+char *_strcpy(char *dest, char *src)
+{
+	if (src != 0)
+	{
+		unsigned long i, size = sizeof(src);
+
+		for (i = 0; i < size - 1; i++)
+		{
+			dest += i;
+			dest = (src + i);
+		}
+		return (dest);
+	}
+	return (0);
+}
