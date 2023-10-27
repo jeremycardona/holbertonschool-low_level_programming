@@ -23,11 +23,9 @@ int _atoi(char *s)
 	{
 		result = get_int(s);
 	}
-	if (result < 0)
-		result++;
+	if (result == INT_MIN)
+		return (result);
 	result *= int_signs(s);
-	if (result < 0)
-		result--;
 	return (result);
 }
 /**
