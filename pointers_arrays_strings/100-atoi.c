@@ -128,7 +128,7 @@ int get_int(char *s)
 	int result = 0, s_i = 0;
 	int digit, digit_place;
 	int s_nums = count_all_nums(s);
-	int num_index;
+	int num_index, neg = 0;
 
 	digit_place = s_nums - 1;
 
@@ -141,14 +141,17 @@ int get_int(char *s)
 				num_index = s_i;
 				if (s[s_i] == '-')
 				{
+					neg = 1;
 					s_i++;
 					continue;
 				}
 				digit = s[num_index] - '0';
 				if (digit > 0)
 					digit = digit * _pow(10, digit_place);
-				if (result + 4 > 2147483643)
+				if (neg && result * -1 <= 2147483640)
 					return (INT_MIN);
+				else if (result >= 2147483640)
+					return (INT_MAX);
 				result += digit;
 				digit_place--;
 				s_i++;
