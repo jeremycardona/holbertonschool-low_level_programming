@@ -41,8 +41,11 @@ int int_signs(char *s)
 			converter *= -1;
 		else if (s[i] == '+')
 			converter *= 1;
+		else if (INT_MIN)
+			return INT_MIN;
 		else if (s[i] >= '0' && s[i] <= '9')
 			return (converter);
+
 		i++;
 	} while (s[i] != '\0');
 
