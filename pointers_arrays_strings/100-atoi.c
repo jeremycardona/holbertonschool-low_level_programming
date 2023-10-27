@@ -23,7 +23,11 @@ int _atoi(char *s)
 	{
 		result = get_int(s);
 	}
+	if (result < 0)
+		result++;
 	result *= int_signs(s);
+	if (result < 0)
+		result--;
 	return (result);
 }
 /**
@@ -41,8 +45,6 @@ int int_signs(char *s)
 			converter *= -1;
 		else if (s[i] == '+')
 			converter *= 1;
-		else if (INT_MIN)
-			return INT_MIN;
 		else if (s[i] >= '0' && s[i] <= '9')
 			return (converter);
 
