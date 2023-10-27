@@ -23,10 +23,12 @@ int _atoi(char *s)
 	{
 		result = get_int(s);
 	}
+	/*
 	if (result == INT_MIN)
 		return (result);
 	if (result == INT_MAX)
 		return (result);
+	*/
 	result *= int_signs(s);
 	return (result);
 }
