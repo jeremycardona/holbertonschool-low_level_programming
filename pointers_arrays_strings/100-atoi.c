@@ -25,7 +25,7 @@ int _atoi(char *s)
 	}
 
 	if (result == INT_MIN)
-		return (result);
+		return (INT_MIN);
 	if (result == INT_MAX)
 		return (result);
 
