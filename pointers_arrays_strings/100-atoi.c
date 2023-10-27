@@ -136,22 +136,24 @@ int get_int(char *s)
 
 	while (s[s_i] != '\0')
 	{
+		if (s[s_i] == '-')
+		{
+			neg = 0;
+			s_i++;
+			continue;
+		}
 		if (s[s_i] >= '0' && s[s_i] <= '9')
 		{
 			while (s[s_i] != ' ' && s[s_i] != '\0')
 			{
 				num_index = s_i;
-				if (s[s_i] == '-')
-				{
-					neg = 0;
-					s_i++;
-					continue;
-				}
 				digit = s[num_index] - '0';
 				if (digit > 0)
 					digit = digit * _pow(10, digit_place);
 				if (neg == 0 && result >= 2147483640 / 10)
+				{
 					return (INT_MIN);
+				}
 				if (neg == 1 && result >= 2147483640 / 10)
 					return (INT_MAX);
 				result += digit;

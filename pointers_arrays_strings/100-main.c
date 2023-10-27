@@ -32,5 +32,8 @@ int main(void)
 
     nb = _atoi("-404");
     printf("%d\n", nb);
+
+    nb = _atoi("-2147483648");
+    printf("%d\n", nb);
     return (0);
 }
