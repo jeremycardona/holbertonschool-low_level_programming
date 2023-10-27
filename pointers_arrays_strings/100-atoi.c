@@ -1,4 +1,4 @@
-#include "main.h"
+#include <limits.h>
 #include <stdio.h>
 
 int _pow(int, int);
