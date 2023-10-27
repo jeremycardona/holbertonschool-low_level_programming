@@ -152,7 +152,7 @@ int get_int(char *s)
 					digit = digit * _pow(10, digit_place);
 				if (neg == 0 && result * -1 <= -2147483647 / 10)
 					return (INT_MIN);
-				if (result >= 2147483640)
+				if (neg == 1 && result >= 2147483640)
 					return (INT_MAX);
 				result += digit;
 				digit_place--;
