@@ -150,7 +150,7 @@ int get_int(char *s)
 				digit = s[num_index] - '0';
 				if (digit > 0)
 					digit = digit * _pow(10, digit_place);
-				if (neg == 0 && result * -1 <= -2147483647 / 10)
+				if (neg == 0 && result <= -2147483647 / 10)
 					return (INT_MIN);
 				if (neg == 1 && result >= 2147483640)
 					return (INT_MAX);
