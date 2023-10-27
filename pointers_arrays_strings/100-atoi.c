@@ -23,12 +23,12 @@ int _atoi(char *s)
 	{
 		result = get_int(s);
 	}
-	/*
+
 	if (result == INT_MIN)
 		return (result);
 	if (result == INT_MAX)
 		return (result);
-	*/
+
 	result *= int_signs(s);
 	return (result);
 }
@@ -150,7 +150,7 @@ int get_int(char *s)
 				digit = s[num_index] - '0';
 				if (digit > 0)
 					digit = digit * _pow(10, digit_place);
-				if (neg == 0 && result * -1 <= -2147483647)
+				if (neg == 0 && result * -1 <= -2147483637)
 					return (INT_MIN);
 				if (result >= 2147483640)
 					return (INT_MAX);
