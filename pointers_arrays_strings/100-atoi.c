@@ -147,7 +147,7 @@ int get_int(char *s)
 					digit = digit * _pow(10, digit_place);
 				if (result * -1 == -2147483640)
 					return (INT_MIN);
-				else if (result == 2147483648)
+				else if (result == 2147483640)
 					return (INT_MAX);
 				result += digit;
 				digit_place--;
