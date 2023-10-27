@@ -148,7 +148,7 @@ int get_int(char *s)
 				digit = s[num_index] - '0';
 				if (digit > 0)
 					digit = digit * _pow(10, digit_place);
-				if (yes && result * -1 == -2147483640)
+				if (yes && result * -1 <= -2147483640)
 					return (INT_MIN);
 				result += digit;
 				digit_place--;
