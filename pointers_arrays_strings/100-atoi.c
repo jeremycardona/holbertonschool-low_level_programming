@@ -143,7 +143,7 @@ int get_int(char *s)
 				digit = s[num_index] - '0';
 				if (digit > 0)
 					digit = digit * _pow(10, digit_place);
-				if (result + result + digit - 1 < INT_MIN - 1)
+				if (result + result + digit - 1 <= INT_MIN)
 					return (INT_MIN);
 				result += digit;
 				digit_place--;
