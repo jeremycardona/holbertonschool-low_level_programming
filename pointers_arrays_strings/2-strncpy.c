@@ -14,7 +14,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (n--)
 	{
-		if (len > 0)
+		if (src != 0)
 			dest[i] = src[i];
 		if (!src[i])
 			break;
