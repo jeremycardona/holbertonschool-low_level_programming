@@ -1,7 +1,12 @@
 #include "main.h"
 /**
- *
- *
+ * _strncat - concat at most n bytes
+ * Description: similar to _strcar but will use at the most
+ * n bytes. jcc
+ * Return: pointer to the resulting string dest
+ * @dest: string
+ * @src: string to be appended
+ * @n: n bytes
  */
 char *_strncat(char *dest, char *src, int n)
 {
