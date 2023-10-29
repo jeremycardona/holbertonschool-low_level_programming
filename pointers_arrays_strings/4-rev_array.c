@@ -3,6 +3,7 @@
  * reverse_array - reverse array of int
  * Description: reverse array of int
  * @n: array size
+ * @a: array of int
  */
 
 void reverse_array(int *a, int n)
