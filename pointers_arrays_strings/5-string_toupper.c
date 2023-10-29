@@ -1,6 +1,9 @@
 #include <stdio.h>
 /**
- *
+ * string_toupper - string to upper
+ * Description: String to upper, check if its already uppercase.
+ * Return: string uppercase
+ * @lower: string
  */
 char *string_toupper(char *lower)
 {
@@ -9,7 +12,7 @@ char *string_toupper(char *lower)
 
 	while (lower[i])
 	{
-		
+
 		c = lower[i];
 		if (c >= 'a' && c <= 'z')
 			c = (int)c - 32;
