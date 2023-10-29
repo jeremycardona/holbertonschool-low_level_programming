@@ -2,7 +2,7 @@
 
 /**
  * _strncpy - copy a string
- * Description: function similar to strncpy.
+ * Description: function similar to stdlib.
  * Return: Dest string replaced by src
  * @dest: string to be replaced
  * @src: string replacement
