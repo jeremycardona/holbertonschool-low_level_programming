@@ -10,11 +10,10 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0, d_i = 0;
-	int src_len = _strlen(src);
+	int src_len = _strlen(src) - 1;
 
 	while (n--)
 	{
-		
 		dest[d_i] = src[i];
 		if (!src[i])
 			break;
