@@ -41,17 +41,17 @@ char *_strcat(char *dest, char *src)
  */
 int _strlen(char *s)
 {
-        int len = 0;
+	int len = 0;
 
-        if (s != 0)
-        {
-                int i;
+	if (s != 0)
+	{
+		int i;
 
-                for (i = 0; *s != '\0'; i++)
-                {
-                        len++;
-                        s++;
-                }
-        }
-        return (len);
+		for (i = 0; *s != '\0'; i++)
+		{
+			len++;
+			s++;
+		}
+	}
+	return (len);
 }
