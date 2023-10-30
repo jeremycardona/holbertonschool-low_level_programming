@@ -1,5 +1,8 @@
 /**
- *
+ * leet - encode strrning
+ * Description: i dont know cuz i dont understand it yet.
+ * Return: string encoded
+ * @str: string to be encoded
  */
 char *leet(char *str)
 {
@@ -12,7 +15,6 @@ char *leet(char *str)
 		j = 0;
 		while (e[j] != '\0')
 		{
-			
 			if (str[i] == e[j])
 			{
 				str[i] = r[j/2];
