@@ -15,7 +15,7 @@ char *cap_string(char *str)
 	{
 		j = 0;
 		c = str[i];
-		if (c >= 'a' && c <= 'z')
+		if (c >= 'a' && c <= 'z' && str[i - 1] != '.')
 			c = (int)c - 32;
 		str[i] = c;
 
