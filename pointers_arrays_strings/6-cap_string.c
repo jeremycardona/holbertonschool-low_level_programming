@@ -15,7 +15,7 @@ char *cap_string(char *str)
 	{
 		j = 0;
 		c = str[i];
-		if (c >= 'a' && c <= 'z') 
+		if (c >= 'a' && c <= 'z')
 			c = (int)c - 32;
 		str[i] = c;
 
@@ -31,8 +31,6 @@ char *cap_string(char *str)
 				i++;
 				continue;
 			}
-			else if (str[i] == '\0')
-				break;
 			else
 			{
 				i++;
