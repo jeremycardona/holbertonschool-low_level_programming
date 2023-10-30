@@ -31,6 +31,8 @@ char *cap_string(char *str)
 				i++;
 				continue;
 			}
+			else if (str[i] == '\0')
+				break;
 			else
 			{
 				i++;
