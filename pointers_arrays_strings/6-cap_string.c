@@ -34,6 +34,7 @@ char *cap_string(char *str)
 			else
 			{
 				i++;
+				j++;
 			}
 		}
 		i++;
