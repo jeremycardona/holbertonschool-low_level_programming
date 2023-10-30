@@ -24,16 +24,14 @@ char *cap_string(char *str)
 			if ('\0' == s[j])
 			{
 				j = 0;
+				i++;
+				continue;
 			}
 			else if (str[i] == s[j] || str[i] == '\n' || str[i] == '\t')
 			{
 				continue;
 			}
-			else
-			{
-				j++;
-			}
-			i++;
+			j++;
 		}
 		i++;
 	}
