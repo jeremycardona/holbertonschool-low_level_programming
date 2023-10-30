@@ -9,8 +9,7 @@ char *cap_string(char *str)
 {
 	int i = 0, j;
 	char c;
-	char separators[] = {' ', ',', '.', '!', '?', '"', ')', '(', '{', '}', \
-		'\n', '\t'};
+	char s[] = {' ', ',', '.', '!', '?', '"', ')', '(', '{', '}'};
 
 	while (str[i])
 	{
@@ -20,23 +19,23 @@ char *cap_string(char *str)
 			c = (int)c - 32;
 		str[i] = c;
 
-		while (str[i] != separators[j])
+		while (str[i] != s[j] && str[i] != '\n' && str[i] != '\t')
 		{
-			if (str[i] == separators[j])
-			{
-				++i;
-				continue;
-			}
-			else if ('\0' == separators[j])
+			if ('\0' == s[j])
 			{
 				j = 0;
 				i++;
 			}
+			else if (str[i] == s[j] || str[i] == '\n' || str[i] == '\t')
+			{
+				i++;
+				continue;
+			}
 			else
 			{
-				j++;
 				i++;
 			}
+			
 		}
 		i++;
 	}
