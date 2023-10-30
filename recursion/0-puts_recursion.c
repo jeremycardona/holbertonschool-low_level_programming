@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _puts_recursion - print a string
  * Description: similar functionality as puts, but implemented recursively.
  * @s: string to be printed
