@@ -9,8 +9,8 @@ char *cap_string(char *str)
 {
 	int i = 0, j;
 	char c;
-	char separators[] = {' ', ',', '.', '!', '?', '"', ')',\
-	       	'(', '{', '}', '\n', '\t'};
+	char separators[] = {' ', ',', '.', '!', '?', '"', ')', '(', '{', '}', \
+		'\n', '\t'};
 
 	while (str[i])
 	{
