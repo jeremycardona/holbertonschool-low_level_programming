@@ -9,19 +9,27 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 0, sum = 0;
-
+	int i = 0, j = 0, sum = 0;
+	if (argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
 	for (; i < argc; i++)
 	{
-		if (*argv[i] >= 'a' && *argv[i] <= 'z')
+		while (**argv)
 		{
-			printf("Error\n");
-			return (1);
-		}
-		if (*argv[i] >= 'A' && *argv[i] <= 'Z')
-		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			if (argv[i][j] >= 'A' && argv[i][j] <= 'Z')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
 	}
 	i = 1;
