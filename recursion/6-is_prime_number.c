@@ -17,7 +17,11 @@ int is_prime_number(int n)
 	return (0);
 }
 /**
- * prime_number - generate primes
+ * prime_number - primes checker
+ * Description: recursive check for primes
+ * Return: 1 if prime num, 0 otherwise
+ * @n: number to check
+ * @i: number starting from
  */
 int prime_number(int n, int i)
 {
@@ -27,7 +31,7 @@ int prime_number(int n, int i)
 		return (1);
 	else if (n % i == 0)
 		return (0);
-	else if (i >= n/2)
+	else if (i >= n / 2)
 		return (1);
 	else
 		return (prime_number(n, i + 1));
