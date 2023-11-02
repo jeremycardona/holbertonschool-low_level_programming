@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - multiply two numbers
  * Description: Multiply two numbers and print the result.
@@ -9,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	if (argc > 1)
-		printf("%d\n", argv[1] * argv[2]);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	else
 	{
 		printf("Error\n");
