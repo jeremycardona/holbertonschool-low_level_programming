@@ -9,7 +9,10 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 0, j = 0, sum = 0;
+	int i = 1, sum = 0, j;
+
+
+	printf("%c\n", argv[0] + 0);
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -17,14 +20,10 @@ int main(int argc, char **argv)
 	}
 	for (; i < argc; i++)
 	{
-		while (**argv)
+		j = 0;
+		while (argv[i][j] != '\0')
 		{
 			if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			if (argv[i][j] >= 'A' && argv[i][j] <= 'Z')
 			{
 				printf("Error\n");
 				return (1);
