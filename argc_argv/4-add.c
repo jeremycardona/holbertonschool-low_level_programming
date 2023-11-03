@@ -12,7 +12,6 @@ int main(int argc, char **argv)
 	int i = 1, sum = 0, j;
 
 
-	printf("%c\n", argv[0] + 0);
 	if (argc == 1)
 	{
 		printf("0\n");
