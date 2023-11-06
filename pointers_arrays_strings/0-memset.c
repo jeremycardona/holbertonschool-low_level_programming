@@ -17,7 +17,8 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		if (s)
 		{
-			**pps = b;
+			if (pps)
+				**pps = b;
 			s++;
 		}
 	}
