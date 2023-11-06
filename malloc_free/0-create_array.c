@@ -23,4 +23,5 @@ char *create_array(unsigned int size, char c)
 	}
 	if (arr)
 		return (arr);
+	return (NULL);
 }
