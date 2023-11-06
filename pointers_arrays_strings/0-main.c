@@ -36,11 +36,18 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char buffer[98] = {0x00};
+	char buffer[] = "Talk is cheap. Show me the code.";
+	char *p;
+	unsigned int len;
+	unsigned int offset;
 
-    simple_print_buffer(buffer, 98);
-    _memset(buffer, 0x01, 95);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);    
-    return (0);
+	len = 33;
+	simple_print_buffer(buffer, len);
+	printf("-------------------------------------------------\n");
+	offset = 0;
+	p = _memset(buffer + offset, 0x20, len);
+	simple_print_buffer(buffer, len);
+	printf("-------------------------------------------------\n");
+	simple_print_buffer(p, len - offset);
+	return (0);
 }
