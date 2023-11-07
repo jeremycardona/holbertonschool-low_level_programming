@@ -21,6 +21,8 @@ char *str_concat(char *s1, char *s2)
 			strcat(s3, "");
 		else
 			strcat(s3, s2);
+		if (*s1 == '\0' && *s2 == '\0')
+			s3 = "";
 		return (s3);
 	}
 	return (NULL);
