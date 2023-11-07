@@ -9,20 +9,21 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *s3 = malloc(strlen(s1) + strlen(s2) + 1);
+	int s1_len = strlen(s1);
+	int s2_len = strlen(s2);
+	char *s3 = malloc(s1_len + s2_len + 1);
+
 
 	if (s3)
 	{
-		if (*s1 == '\0')
-			strcpy(s3, "");
-		else
+		if (s1_len > 0)
 			strcpy(s3, s1);
-		if (*s2 == '\0')
-			strcat(s3, "");
-		else
-			strcat(s3, s2);
-		if (*s1 == '\0' && *s2 == '\0')
+		else 
 			s3 = "";
+		if (s2_len > 0)
+			strcat(s3, s2);
+		else
+			strcat(s3, "");
 		return (s3);
 	}
 	return (NULL);
