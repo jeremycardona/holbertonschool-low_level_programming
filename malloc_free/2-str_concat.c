@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	if (s3)
 	{
 		if (!s1)
-			strcat(s3, "");
+			strcpy(s3, "");
 		if (!s2)
 			strcat(s3, "");
 		if (s1)
@@ -26,6 +26,7 @@ char *str_concat(char *s1, char *s2)
 
 		return (s3);
 	}
+	s3 = "";
 	return (NULL);
 
 }
