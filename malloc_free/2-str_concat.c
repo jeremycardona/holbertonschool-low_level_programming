@@ -14,11 +14,11 @@ char *str_concat(char *s1, char *s2)
 	if (s3)
 	{
 		if (s1 == NULL)
-			strcpy(s3, " ");
+			strcpy(s3, "");
 		else
 			strcpy(s3, s1);
 		if (s2 == NULL)
-			strcat(s3, " ");
+			strcat(s3, "");
 		else
 			strcat(s3, s2);
 		return (s3);
