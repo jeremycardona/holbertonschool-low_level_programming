@@ -13,15 +13,19 @@ char *str_concat(char *s1, char *s2)
 	int s2_len = strlen(s2);
 	char *s3 = malloc(s1_len + s2_len + 1);
 
-	if (s1 == NULL)
+	if (s1 == NULL && s3)
 		strcpy(s3, "");
-	if (s2 == NULL)
+	if (s2 == NULL && s3)
 		strcat(s3, "");
+	if (s1 == NULL && s2 == NULL && s3)
+	{
+		return (s3);
+	}
 	if (s3)
 	{
-		if (s1)
+		if (s1_len > 0)
 			strcpy(s3, s1);
-		if (s2)
+		if (s2_len > 0)
 			strcat(s3, s2);
 		return (s3);
 	}
