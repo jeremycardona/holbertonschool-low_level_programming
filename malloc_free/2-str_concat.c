@@ -18,11 +18,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s1_len > 0)
 			strcpy(s3, s1);
-		else 
-			strcpy(s3, "");	
+		else if (!s1)
+			strcpy(s3, "");
 		if (s2_len > 0)
 			strcat(s3, s2);
-		else
+		else if (!s2)
 			strcat(s3, "");
 		return (s3);
 	}
