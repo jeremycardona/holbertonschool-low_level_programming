@@ -17,16 +17,16 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (!s1)
 			strcpy(s3, "");
+		else if (s1)
+			strcpy(s3, s1);
 		if (!s2)
 			strcat(s3, "");
-		if (s1)
-			strcpy(s3, s1);
-		if (s2)
+		else if (s2)
 			strcat(s3, s2);
-
+		if (strlen(s3) == 0)
+			s3 = "";
 		return (s3);
 	}
-	s3 = "";
 	return (NULL);
 
 }
