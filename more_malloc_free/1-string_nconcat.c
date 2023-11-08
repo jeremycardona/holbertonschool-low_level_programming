@@ -38,10 +38,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (s1 && s2 && s3)
 	{
-		strcpy(s3, s1);
+		if (s1_len > 0)
+			strcpy(s3, s1);
 		if (s2_len == n)
 			strncat(s3, s2, n);
-		else
+		else if (s2_len > 0)
 			strcat(s3, s2);
 		return (s3);
 	}
