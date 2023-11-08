@@ -27,9 +27,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	if (!s1 && s3)
-		strcpy(s3, "");
+	{
+		s1 = "";
+		strcpy(s3, s1);
+	}
 	if (!s2 && s3)
-		strcat(s3, "");
+	{
+		s2 = "";
+		strcat(s3, s2);
+	}
 	if (s1 && s2 && s3)
 	{
 		strcpy(s3, s1);
