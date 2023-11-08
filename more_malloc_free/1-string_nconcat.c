@@ -26,6 +26,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		free(s3);
 		return (NULL);
 	}
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
 	if (s1 && s2 && s3)
 	{
 		strcpy(s3, s1);
@@ -33,16 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			strncat(s3, s2, n);
 		else
 			strcat(s3, s2);
-	}
-	if (!s1 && s3)
-	{
-		s1 = "";
-		strcpy(s3, s1);
-	}
-	if (!s2 && s3)
-	{
-		s2 = "";
-		strcat(s3, s2);
 	}
 
 	return (s3);
