@@ -15,11 +15,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *s3;
 
 	if (n >= s2_len)
-		s3 = malloc((s1_len + s2_len) * sizeof(*s3));
+		s3 = malloc((s1_len + s2_len) * sizeof(*s3) + 1);
 	else
 	{
 		s2_len = n;
-		s3 = malloc((s1_len + s2_len) * sizeof(*s3));
+		s3 = malloc((s1_len + s2_len) * sizeof(*s3) + 1);
 	}
 	if (!s3)
 	{
