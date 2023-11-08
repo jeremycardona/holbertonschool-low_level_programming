@@ -10,10 +10,14 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int s1_len = strlen(s1);
-	unsigned int s2_len = strlen(s2);
+	unsigned int s1_len = 0;
+	unsigned int s2_len = 0;
 	char *s3;
 
+	if (s1)
+		s1_len = strlen(s1);
+	if (s2)
+		s2_len = strlen(s2);
 	if (n >= s2_len)
 		s3 = malloc((s1_len + s2_len) * sizeof(*s3) + 1);
 	else
