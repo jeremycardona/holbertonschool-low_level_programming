@@ -30,14 +30,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (!s2)
 		s2 = "";
-	if (s1 && s2 && s3)
+	if (s3)
 	{
 		strcpy(s3, s1);
 		if (s2_len == n)
 			strncat(s3, s2, n);
 		else
 			strcat(s3, s2);
+		return (s3);
 	}
 
-	return (s3);
+	return (NULL);
 }
