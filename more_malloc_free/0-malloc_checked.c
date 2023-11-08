@@ -2,6 +2,7 @@
 /**
  * malloc_checked - allocate memory
  * Description: allocate memory, if it fails terminate process.
+ * Return: void ptr
  * @b: size to allocate
  */
 void *malloc_checked(unsigned int b)
