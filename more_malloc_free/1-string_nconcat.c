@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		strcpy(s3, s1);
 		if (s2_len == n)
 			strncat(s3, s2, n);
-		else (s2_len > 0)
+		else
 			strcat(s3, s2);
 	}
 	if (!s1 && s3)
@@ -44,6 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 		strcat(s3, s2);
 	}
-	
+
 	return (s3);
 }
