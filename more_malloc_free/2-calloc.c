@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdlib.h>
 /**
  * _calloc - allocate memory for an array
@@ -13,11 +14,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	arr = malloc(size * sizeof(nmemb));
+	arr = malloc(size * nmemb);
 	if (!arr)
 	{
 		free(arr);
 		return (NULL);
 	}
+	if (arr)
+		memset(arr, 0, size * nmemb);
 	return (arr);
 }
