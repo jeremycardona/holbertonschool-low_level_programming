@@ -1,5 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
+/* prototypes */
+int min_v(int, int);
+int count_size(int, int);
+
 /**
  * array_range - create an array of ints
  * Description: create an array of ints starting from min
@@ -7,20 +11,18 @@
  * @min: starting from
  * @max: max value to add
  */
-int min_v(int, int);
-int count_size(int, int);
 int *array_range(int min, int max)
 {
 	int *array;
 	int count, i, t_min = min;
 	int v = min_v(min, max);
-	
+
 	if (!v)
 		return (NULL);
-	
+
 	count = count_size(min, max);
 	array = malloc(count * sizeof(*array));
-	
+
 	if (!array)
 	{
 		free(array);
@@ -57,9 +59,9 @@ int min_v(int i, int j)
 int count_size(int min, int max)
 {
 	int c = min;
-	
-	if (min_v(min,max))
-	{		
+
+	if (min_v(min, max))
+	{
 		for (; c <= max; c++)
 		{
 		}
