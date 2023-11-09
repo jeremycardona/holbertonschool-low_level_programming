@@ -44,7 +44,7 @@ int *array_range(int min, int max)
  */
 int min_v(int i, int j)
 {
-	if (i < j)
+	if (i <= j)
 		return (1);
 	return (0);
 }
@@ -65,7 +65,7 @@ int count_size(int min, int max)
 		for (; c <= max; c++)
 		{
 		}
-		return (c + 1);
+		return (c);
 	}
 	return (0);
 }
