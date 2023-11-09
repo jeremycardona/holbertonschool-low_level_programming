@@ -14,7 +14,7 @@ int count_size(int, int);
 int *array_range(int min, int max)
 {
 	int *array;
-	int count, i, t_min = min;
+	int count, i;
 	int v = min_v(min, max);
 
 	if (!v)
@@ -28,10 +28,10 @@ int *array_range(int min, int max)
 		free(array);
 		return (NULL);
 	}
-	for (i = 0 ; i <= max; i++)
+	for (i = 0; i <= count; i++)
 	{
-		array[i] = t_min;
-		t_min++;
+		array[i] = min;
+		min++;
 	}
 	return (array);
 }
@@ -58,14 +58,7 @@ int min_v(int i, int j)
  */
 int count_size(int min, int max)
 {
-	int c = min;
-
 	if (min_v(min, max))
-	{
-		for (; c <= max; c++)
-		{
-		}
-		return (c);
-	}
+		return (max - min);
 	return (0);
 }
