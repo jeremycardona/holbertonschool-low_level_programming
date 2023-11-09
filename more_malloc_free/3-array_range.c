@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * array_range - create an array of ints
  * Description: create an array of ints starting from min
@@ -25,7 +26,7 @@ int *array_range(int min, int max)
 		free(array);
 		return (NULL);
 	}
-	for (i = 0 ; i < max; i++)
+	for (i = 0 ; i <= max; i++)
 	{
 		array[i] = t_min;
 		t_min++;
