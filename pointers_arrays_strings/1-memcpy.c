@@ -1,11 +1,25 @@
+#include <stdio.h>
 /**
- * _strchr - something ill try later
- * Description: something ill describe later.
+ * _memcpy - copies memory area
+ * Description: copies n bytes from memory area src to memory
+ * area dest.
  * Return: something.
- * @s: ba
- * @c: char
+ * @dest: receives copy
+ * @src: copy
+ * @n: bytes to copy
  */
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	return (s);
+	char *t_dest = dest;
+	char *t_src = src;
+
+	if (src)
+	{
+		while (n--){
+			*t_dest = *t_src;
+			t_dest++;
+			t_src++;
+		}
+	}
+	return (dest);
 }
