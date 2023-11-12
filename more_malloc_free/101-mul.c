@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	num1 = malloc(sizeof(*num1));
 	if (!num1)
 	{
