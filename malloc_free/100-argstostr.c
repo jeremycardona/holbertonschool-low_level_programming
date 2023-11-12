@@ -12,16 +12,17 @@ char *argstostr(int ac, char **av)
 {
 	char *str;
 	int arg_len = 0;
-	int i;
+	int i, newline_count = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		arg_len += strlen(av[i]);
+		newline_count++;
 	}
 
-	str = malloc(arg_len * sizeof(*str) + 1);
+	str = malloc((arg_len + newline_count) * sizeof(*str));
 	if (!str)
 	{
 		free(str);
