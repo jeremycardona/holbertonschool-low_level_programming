@@ -13,6 +13,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *news;
 	char *n, *o;
+	int l_name = 0;
+	int l_owner = 0;
 
 	news = malloc(sizeof(*news));
 	if (!news)
@@ -20,12 +22,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(news);
 		return (NULL);
 	}
-	n = malloc(sizeof(*n));
+	if (name)
+		l_name = strlen(name);
+	n = malloc(sizeof(*n) * l_name);
 	if (!n)
 	{
 		free(n);
 		return (NULL);
 	}
+	if (owner)
+		l_name = strlen(owner);
 	o = malloc(sizeof(*o));
 	if (!o)
 	{
