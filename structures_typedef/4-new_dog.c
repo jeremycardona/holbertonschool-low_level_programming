@@ -36,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(o);
 		return (NULL);
 	}
-	news = alloc(sizeof(dog_t));
+	news = malloc(sizeof(dog_t));
 	if (!news)
 	{
 		free(news);
