@@ -39,10 +39,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	news = 0;
 	if (create_dog(news))
 		news = create_dog(news);
+	else
+		return (NULL);
 	if (create_dog_owner(news))
 		news->owner = create_dog_owner(news);
+	else
+		return (NULL);
 	if (create_dog_name(news))
 		news->name = create_dog_name(news);
+	else
+		return (NULL);
 	if (news)
 	{
 		news->age = age;
