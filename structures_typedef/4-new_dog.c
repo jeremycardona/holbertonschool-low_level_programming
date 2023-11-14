@@ -19,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		l_name = strlen(name);
 	if (owner)
 		l_owner = strlen(owner);
-	news = malloc(sizeof(*news));
+	news = malloc(sizeof(dog_t));
 	if (!news)
 	{
 		free(news);
