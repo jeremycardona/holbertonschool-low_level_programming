@@ -36,7 +36,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(o);
 		return (NULL);
 	}
-	news = 0;
+	news = alloc(sizeof(dog_t));
+	if (!news)
+	{
+		free(news);
+		return (NULL);
+	}
 	if (create_dog(news))
 		news = create_dog(news);
 	else
