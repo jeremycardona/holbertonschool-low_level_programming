@@ -1,6 +1,9 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <string.h>
+
+char *create_dog_name(dog_t *);
+char *create_dog_owner(dog_t *);
 /**
  * new_dog - create anew dog
  * @name: dog name
@@ -19,12 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		l_name = strlen(name);
 	if (owner)
 		l_owner = strlen(owner);
-	news = malloc(sizeof(dog_t));
-	if (!news)
-	{
-		free(news);
-		return (NULL);
-	}
+	
 	n = malloc(l_name + 1);
 	if (!n)
 	{
@@ -37,8 +35,55 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(o);
 		return (NULL);
 	}
+	news = malloc(sizeof(dog_t));
+	if (!news)
+	{
+		free(news);
+		return (NULL);
+	}
+	news->age = age;
+	news->owner = create_dog_owner(news);
+	if (!news->owner)
+		return (NULL);
+	news->name = create_dog_name(news);
+	if (!news->name)
+		return (NULL);
 	news->age = age;
 	news->name = strcpy(n, name);
 	news->owner = strcpy(o, owner);
 	return (news);
+}
+/**
+ * create_dog_name - create memory for dog name 
+ * Description: function that allocated memory for struct
+ * and its pointers elements
+ * Return: pointer or null
+ * @dog: struct of type dog_t
+ */
+char *create_dog_name(dog_t *dog)
+{
+	dog->name = malloc(sizeof(dog->name));
+	if (dog->name == NULL)
+	{
+		free(dog->name);
+		return (NULL);
+	}
+	return (dog->name);
+}
+/**
+ * create_dog_owner - create memory for dog owner 
+ * Description: function that allocated memory for struct
+ * and its pointers elements
+ * Return: pointer or null
+ * @dog: struct of type dog_t
+ */
+char *create_dog_owner(dog_t *dog)
+{
+	dog->owner = malloc(sizeof(dog->owner));
+	if (dog->owner == NULL)
+	{
+		free(dog->owner);
+		return (NULL);
+	}
+	return (dog->owner);
 }
