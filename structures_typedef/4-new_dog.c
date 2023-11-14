@@ -87,7 +87,7 @@ dog_t *create_dog(dog_t *dog)
  */
 char *create_dog_name(dog_t *dog)
 {
-	dog->name = malloc(sizeof(dog->name));
+	dog->name = malloc(sizeof(char *));
 	if (dog->name == NULL)
 	{
 		free(dog->name);
@@ -104,7 +104,7 @@ char *create_dog_name(dog_t *dog)
  */
 char *create_dog_owner(dog_t *dog)
 {
-	dog->owner = malloc(sizeof(dog->owner));
+	dog->owner = malloc(sizeof(char *));
 	if (dog->owner == NULL)
 	{
 		free(dog->owner);
