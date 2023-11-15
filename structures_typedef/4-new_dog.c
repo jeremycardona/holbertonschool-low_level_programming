@@ -25,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		l_owner = strlen(owner);
 	if (l_name + l_owner == 0)
 		return (NULL);
-	
+
 	news = NULL;
 	news = create_dog(news);
 	doggy = news;
