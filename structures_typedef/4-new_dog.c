@@ -29,15 +29,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	news = NULL;
 	news = create_dog(news);
 	doggy = news;
-	doggy->name = create_dog_name(news, l_name);
-	doggy->owner = create_dog_owner(news, l_owner);
-	if (!(news->name) || !(news->owner) || !news)
-	{
-		free(news->owner);
-		free(news->name);
-		free(news);
+	if (!news)
 		return (NULL);
-	}
+	doggy->name = create_dog_name(news, l_name);
+	if (!(news->name))
+		return (NULL);
+	doggy->owner = create_dog_owner(news, l_owner);
+	if (!(news->owner))
+		return (NULL);
 	doggy->age = age;
 	doggy->name = strcpy(news->name, name);
 	doggy->owner = strcpy(news->name, owner);
@@ -71,10 +70,9 @@ dog_t *create_dog(dog_t *dog)
 char *create_dog_name(dog_t *dog, int length)
 {
 	dog->name = malloc(sizeof(length + 1));
-	if (dog->name == NULL || !dog)
+	if (dog->name == NULL) 
 	{
 		free(dog->name);
-		free(dog);
 		return (NULL);
 	}
 	return (dog->name);
@@ -90,11 +88,9 @@ char *create_dog_name(dog_t *dog, int length)
 char *create_dog_owner(dog_t *dog, int length)
 {
 	dog->owner = malloc(sizeof(length + 1));
-	if (dog->owner == NULL || !(dog->name) || !dog)
+	if (dog->owner == NULL)
 	{
-		free(dog->name);
 		free(dog->owner);
-		free(dog);
 		return (NULL);
 	}
 	return (dog->owner);
