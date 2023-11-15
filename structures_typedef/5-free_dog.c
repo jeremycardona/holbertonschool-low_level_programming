@@ -7,7 +7,7 @@
  */
 void free_dog(dog_t *d)
 {
-	if (!(d->owner))
+	if (!(d->owner) && d)
 	{
 		free(d);
 		exit(0);
