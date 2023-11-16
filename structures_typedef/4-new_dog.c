@@ -3,9 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
-dog_t *create_dog(dog_t *);
-char *create_dog_name(dog_t *, int);
-char *create_dog_owner(dog_t *, int);
+int length_name(char *);
+int length_owner(char *);
 /**
  * new_dog - create anew dog
  * @name: dog name
@@ -16,67 +15,55 @@ char *create_dog_owner(dog_t *, int);
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *news, *doggy;
-	int l_name = 0, l_owner = 0;
+	dog_t *news;
+	int l_name = length_name(name), l_owner = length_owner(owner);
 
-	if (name)
-		l_name = strlen(name);
-	if (owner)
-		l_owner = strlen(owner);
-	if (l_name + l_owner == 0)
+	if (l_name + l_owner <= 0)
 		return (NULL);
-
-	news = NULL;
-	news = create_dog(news);
-	if (!news)
+	news = malloc(sizeof(dog_t));
+	if (news == NULL)
+	{
 		return (NULL);
-	create_dog_name(news, l_name);
+	}
+	news->name = malloc(l_name + 1);
 	if (!(news->name))
+	{
+		free(news);
 		return (NULL);
-	create_dog_owner(news, l_owner);
+	}
+	news->owner = malloc(l_owner + 1);
 	if (!(news->owner))
+	{
+		free(news->name);
+		free(news);
 		return (NULL);
-	doggy = news;
-	doggy->age = age;
-	doggy->name = strcpy(news->name, name);
-	doggy->owner = strcpy(news->name, owner);
+	}
+	news->age = age;
+	strcpy(news->name, name);
+	strcpy(news->name, owner);
 	return (news);
 }
 /**
- * create_dog - create memory for struct
- * Description: function that allocates memory for struct
- * pointer
- * Return: pointer
- * @dog: struct of type dog_t
+ * length_name - getlength of string
+ * Description:  s
+ * Return: length
+ * @name: string
  */
-dog_t *create_dog(dog_t *dog)
+int length_name(char *name)
 {
-	dog = malloc(sizeof(dog_t));
-	return (dog);
+	if (name)
+		return (strlen(name));
+	return (0);
 }
 /**
- * create_dog_name - create memory for dog name
- * Description: function that allocated memory for struct
- * and its pointers elements
- * Return: pointer
- * @dog: struct of type dog_t
- * @length: space to allocate
+ * length_owner - get lenth of string
+ * Description: length
+ * Return: length
+ * @owner: string
  */
-char *create_dog_name(dog_t *dog, int length)
+int length_owner(char *owner)
 {
-	dog->name = malloc(sizeof(length + 1));
-	return (dog->name);
-}
-/**
- * create_dog_owner - create memory for dog owner
- * Description: function that allocated memory for struct
- * and its pointers elements
- * Return: pointer
- * @dog: struct of type dog_t
- * @length: space to allocate
- */
-char *create_dog_owner(dog_t *dog, int length)
-{
-	dog->owner = malloc(sizeof(length + 1));
-	return (dog->owner);
+	if (owner)
+		return (strlen(owner));
+	return (0);
 }
