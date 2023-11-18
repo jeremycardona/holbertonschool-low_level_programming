@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	int num1, num2;
 	char o;
 	int (*operation)(int, int);
-	
+
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	o = argv[2][0];
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	
+
 	if (num2 == 0 && (o == '/' || o == '%'))
 	{
 		printf("Error\n");
