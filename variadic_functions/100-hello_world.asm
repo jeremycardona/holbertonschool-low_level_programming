@@ -14,5 +14,5 @@ _start:
   syscall           ; );
 
 section .rodata
-  msg: db "Hello, World", 0
+  msg: db "Hello, World", 10
   msglen: equ $ - msg
