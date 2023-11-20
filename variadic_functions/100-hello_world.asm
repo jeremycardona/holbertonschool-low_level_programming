@@ -1,15 +1,15 @@
-default rel
+section .data
+	msg db "Hello, World\n", 10
 
-section .rodata
-msg: db "Hello, World\n", 0
-
-section .text
-global hello
+	section .text
+	global hello
 hello:
-    lea rax, [msg]
-    ret
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, msg
+	mov rdx, 10
+	syscall
 
-%ifidn __OUTPUT_FORMAT__,elf64
-section .note.GNU-stack noalloc noexec nowrite progbits
-%endif
-
+	mov rax, 60
+	mov rdi, 0
+	syscall
