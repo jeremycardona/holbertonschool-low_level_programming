@@ -19,7 +19,7 @@ size_t print_list(const list_t *h)
 		if (!h->str)
 			printf("[0] (nil)");
 		else
-			printf("[%lu] %s\n", link->len, link->str);
+			printf("[%u] %s\n", link->len, link->str);
 		link = link->next;
 		nodes_count++;
 	}
