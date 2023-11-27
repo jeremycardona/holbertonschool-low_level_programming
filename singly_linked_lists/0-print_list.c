@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 	link = h;
 	while (link)
 	{
-		if (!h->str)
+		if (!link->str)
 			printf("[0] (nil)\n");
 		else
 			printf("[%u] %s\n", link->len, link->str);
