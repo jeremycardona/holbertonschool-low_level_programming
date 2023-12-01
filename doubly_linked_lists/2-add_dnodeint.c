@@ -3,16 +3,16 @@
 
 /**
  * add_dnodeint - insert node to doubly ll
- * Description: insert node to head 
- * The new node is always added before 
- * the head of the given Linked List. 
- * The task can be performed by using 
+ * Description: insert node to head
+ * The new node is always added before
+ * the head of the given Linked List.
+ * The task can be performed by using
  * the following 5 steps:
  * 1.) Firstly, allocate a new node (say new_node).
  * 2.) Now put the required data in the new node.
- * 3.) Make the next of new_node point to the 
+ * 3.) Make the next of new_node point to the
  * current head of the doubly linked list.
- * 4.) Make the previous of the current 
+ * 4.) Make the previous of the current
  * head point to new_node.
  * 5.) Lastly, point head to new_node.
  * Return: node address
