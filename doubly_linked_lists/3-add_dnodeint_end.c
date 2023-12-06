@@ -1,9 +1,9 @@
 #include "lists.h"
 #include <stdlib.h>
-
 /**
  * add_dnodeint_end - add a new node at the end of doubly ll.
- * Description: function that will add a new node at the end of doubly ll and fill data.
+ * Description: function that will add a new node at the end of
+ * doubly ll and fill data.
  * 1. Create a new node (say new_node).
  * 2. Put the value in the new node.
  * 3. Make the next pointer of new_node as null.
@@ -15,7 +15,7 @@
  * @head: list of doubly linked lists
  * @n: dll data to put
  */
- dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *node, *last;
 
@@ -24,7 +24,6 @@
 	{
 		return (NULL);
 	}
-
 	node->n = n;
 	node->next = NULL;
 	last = *head;
