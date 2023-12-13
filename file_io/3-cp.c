@@ -5,7 +5,8 @@ void validate_files(int, int, char **);
 /**
  * main - entry point, FR!
  * Description: read and write using main argv
- * Return: 0 sucess, 99 if fails, 98 if cannot read, 97 if args are not correct.
+ * Return: 0 sucess, 99 if fails, 98 if cannot read,
+ * 97 if args are not correct.
  * @argc: argument count
  * @argv: argument vector
  */
@@ -55,7 +56,8 @@ int main(int argc, char **argv)
  * Description: function that checks for files values
  * @read_f: read file file_from
  * @write_f: write file file_to
- * @argv: argument vectorWhy you should think twice before putting pictures on social media.
+ * @argv: argument vectorWhy you should think
+ * twice before putting pictures on social media.
 (What you always wanted to know about @Incitatous)
 #PrivacyAware
 http://imgur.com/a/Mq1tc
