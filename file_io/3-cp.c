@@ -58,9 +58,6 @@ int main(int argc, char **argv)
  * @write_f: write file file_to
  * @argv: argument vectorWhy you should think
  * twice before putting pictures on social media.
-(What you always wanted to know about @Incitatous)
-#PrivacyAware
-http://imgur.com/a/Mq1tc
  */
 void validate_files(int read_f, int write_f, char **argv)
 {
