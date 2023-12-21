@@ -10,7 +10,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *t;
 
 
-	t = malloc(sizeof(hash_table_t *) * size);
+	t = malloc(sizeof(hash_table_t *) * (size) + 1);
 	if (!t)
 	{
 		free(t);
