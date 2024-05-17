@@ -1,5 +1,6 @@
 # Low level programming  
-***Holberton Coding School*** 
+
+***Holberton Coding School***  
 C programming language.  
 Repository for all the programming projects.
 ---
